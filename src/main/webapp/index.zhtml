@@ -1,6 +1,5 @@
-<?taglib uri="http://www.zkoss.org/dsp/web/theme" prefix="t"?>
-<x:html sclass="no-js" lang="en" xmlns="native" xmlns:x="xhtml"
-	xmlns:sh="shadow">
+<zk:zk  xmlns="native" xmlns:x="xhtml" xmlns:sh="shadow" xmlns:zk="zk">
+<x:html sclass="no-js" lang="en">
 	<x:head>
 		<meta content="ZK8 Series: Build Your Own Responsive Website in 10 Seconds" name="description"/>
 		<meta content="ZK, Foundation, JQuery, ZK MVVM, Java, DataBinding, Responsive Design, Bootstrap" name="keywords"/>
@@ -79,7 +78,7 @@
 				// init the main content foundation
 				setTimeout(function () {
 					$(document).foundation();
-				});
+				}, 150);
 			});
 		});</script>
 
@@ -105,3 +104,4 @@
 		</script>
 	</x:body>
 </x:html>
+</zk:zk>
