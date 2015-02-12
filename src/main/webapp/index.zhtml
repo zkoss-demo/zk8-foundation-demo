@@ -1,0 +1,107 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/theme" prefix="t"?>
+<x:html sclass="no-js" lang="en" xmlns="native" xmlns:x="xhtml"
+	xmlns:sh="shadow">
+	<x:head>
+		<meta content="ZK8 Series: Build Your Own Responsive Website in 10 Seconds" name="description"/>
+		<meta content="ZK, Foundation, JQuery, ZK MVVM, Java, DataBinding, Responsive Design, Bootstrap" name="keywords"/>
+		<meta charset="utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>ZK Foundation Integration</title>
+		<link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="css/foundation.css" />
+		<link rel="stylesheet" href="css/jquery.ripple.css" />
+		<link rel="stylesheet" href="css/zk_foundation_demo.css.dsp" />
+		<link rel="shortcut icon" type="image/x-icon" href="http://www.zkoss.org/img/favicon.ico"/>
+		
+		<script src="js/vendor/modernizr.js"></script>
+		<script src="js/jquery.ripple.js"></script>
+	</x:head>
+	<x:body>
+		<x:div id="container"
+			viewModel="@id('vm') @init('org.zkoss.blog.example.FoundationVM')">
+			<x:button id="opensource" data-reveal-id="myModal" title="View Source" data-ripple><i class="z-icon-external-link"></i></x:button>
+			<div class="off-canvas-wrap move-right" data-offcanvas="data-offcanvas">
+				<div class="inner-wrap">
+					<nav class="tab-bar">
+						<section class="left-small">
+							<a class="left-off-canvas-toggle menu-icon"
+								href="javascript:;">
+								<span></span>
+							</a>
+						</section>
+					</nav>
+
+					<aside class="left-off-canvas-menu">
+						<a id="logo" href="http://www.zkoss.org">
+							<img src="img/top_zk_logo_ext.png" alt="ZK"/>
+						</a>
+						<ul class="off-canvas-list">
+							<sh:forEach items="@init(vm.templates)">
+								<x:li
+									sclass="@load(each eq vm.currentTemplate ? 'active' : '')">
+									<x:a
+										onClick="@command('changeTemplate', template=each)"
+										textContent="@load(each)" />
+									<sh:apply templateURI="@load(vm.toIcon(each))" /> 
+								</x:li>
+							</sh:forEach>
+						</ul>
+					</aside>
+
+					<x:section class="main-section">
+						<sh:apply
+							templateURI="@load(vm.toLink(vm.currentTemplate))" />
+					</x:section>
+					<!-- <a class="exit-off-canvas"></a> -->
+				</div>
+				<div id="myModal" class="reveal-modal" data-reveal="data-reveal">
+					<x:h3 textContent="@load((vm.currentTemplate += ' Template'))"/>
+					<h5>Copy the HTML and paste it between your ZK page. </h5>
+					<a class="close-reveal-modal">&#215;</a>
+					<x:pre textContent="@load(vm.toSource(vm.currentTemplate))"/>
+				</div>
+			</div>
+		</x:div>
+		<script src="js/foundation.min.js"></script>
+		<script>zk.afterMount(function () {
+			// init foundation
+			$(document).foundation();
+			
+			// init repple animation
+			$('[data-ripple]').ripple({ color: 'rgba(0,0,0,.25)' });
+			
+			zkbind.$('#container').after('changeTemplate', function () {
+				var elem = $('.off-canvas-wrap.move-right');
+				if (elem.length)
+					elem.removeClass('move-right');
+				
+				// init the main content foundation
+				setTimeout(function () {
+					$(document).foundation();
+				});
+			});
+		});</script>
+
+		<script if='${execution.serverName == "www.zkoss.org" or execution.serverName == "www.potix.com"}'>
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		
+		var gafn = function () {
+		if (window._gat) {
+			gafn = null;
+			try {
+				var pageTracker = _gat._getTracker("UA-121377-3");
+				pageTracker._setDomainName("zkoss.org");
+				pageTracker._initData();
+				pageTracker._trackPageview();
+		
+			} catch (e) {
+			}
+		} else
+			setTimeout(gafn, 1000);
+		};
+		gafn();
+		</script>
+	</x:body>
+</x:html>

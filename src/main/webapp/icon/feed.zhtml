@@ -1,0 +1,131 @@
+<zk:zk xmlns:zk="zk" xmlns="native">
+	<div class="template">
+		<div class="row">
+			<div class="large-12 medium-12 small-12 columns">
+				<span class="display"
+					style="width: 100%; height: 20px;">
+				</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-2 medium-2 small-2 columns">
+				<span class="display"
+					style="width: 100%; height: 120px;">
+				</span>
+			</div>
+			<div class="large-8 medium-8 small-8 columns">
+				<div class="row">
+					<div class="large-2 medium-2 small-2 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+					<div class="large-10 medium-10 small-10 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-2 medium-2 small-2 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+					<div class="large-10 medium-10 small-10 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-2 medium-2 small-2 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+					<div class="large-10 medium-10 small-10 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-2 medium-2 small-2 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+					<div class="large-10 medium-10 small-10 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-2 medium-2 small-2 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+					<div class="large-10 medium-10 small-10 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-2 medium-2 small-2 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+					<div class="large-10 medium-10 small-10 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-2 medium-2 small-2 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+					<div class="large-10 medium-10 small-10 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-2 medium-2 small-2 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+					<div class="large-10 medium-10 small-10 columns">
+						<span class="display"
+							style="width: 100%; height: 15px;">
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="large-2 medium-2 small-2 columns">
+				<span class="display"
+					style="width: 100%; height: 40px;">
+				</span>
+				<span class="display"
+					style="width: 100%; height: 60px;">
+				</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 medium-12 small-12 columns">
+				<span class="display"
+					style="width: 100%; height: 15px;">
+				</span>
+			</div>
+		</div>
+	</div>
+</zk:zk>
