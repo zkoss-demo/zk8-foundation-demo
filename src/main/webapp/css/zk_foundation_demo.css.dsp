@@ -102,14 +102,8 @@ ul.off-canvas-list li:hover:after {
 }
 
 #logo {
-	padding: 10px 0;
+	padding: 10px 15px;
 	display: inline-block;
-}
-#logo:after {
-	content: '8';
-	position: relative;
-	top: -7px;
-	font-size: 16px;
 }
 #container {
 	position: relative;
